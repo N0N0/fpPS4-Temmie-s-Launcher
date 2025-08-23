@@ -36,12 +36,11 @@ function removeFilesDirs(){
 	for entry in "${REM_FILES_DIR_LIST[@]}"
 	do
 
+		printf "===> Removing $entry"
 		if [ -f $entry ]; then
-			echo -e "Removing $entry"
 			rm "$entry"
 		fi
 		if [ -d $entry ]; then
-			echo -e "Removing $entry"
 			rm -rf "$entry"
 		fi
 
@@ -115,13 +114,13 @@ printProcessCompleteMsg
 updateStatus "Prepare NW.js folder"
 cd Nwjs
 rm -rf *
-echo "" > .gitkeep
+touch .gitkeep
 cd ..
 printProcessCompleteMsg
 
 updateStatus "Checking if Emu folder exists"
 if ! [ -d Emu ]; then
-	echo "Creating Emu dir..."
+	printf "Creating Emu dir..."
 	mkdir Emu
 fi
 printProcessCompleteMsg

@@ -1,10 +1,8 @@
-stty -echo
 clear
-echo 
-echo "Updating fpPS4 Temmie's Launcher - Please Wait..."
-echo "IMPORTANT: Make sure to have git installed on your OS / Distro!"
-echo 
-git reset --hard
-git pull
-stty echo
-exit
+printf "  #===========================#\n"
+printf "     fpPS4 Temmie's Launcher\n"
+printf "     Written by @themitosan\n"
+printf "  #===========================#\n\n"
+printf "===> Updating launcher - Please Wait...\nIMPORTANT: Make sure to have git installed on your OS / Distro!\n"
+git reset --hard && git pull
+exit 0
